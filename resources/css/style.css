@@ -1,0 +1,281 @@
+/* variáveis */
+:root {
+    --cor-header: #070cff;
+    --cor-de-fundo: #00012e;
+    --azul: #0006FF;
+    --cor-botao: #00FF23;
+    --cor-texto: white;
+    --primeiro-gradiente: #f2f3ff;
+    --segundo-gradiente: #000269;
+
+}
+
+/* estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+/* cabeçalho */
+header {
+    background-color: var(--cor-header);
+}
+
+.caixa-logo {
+    width: 940px;
+    margin: 0 auto;
+
+}
+
+.logo {
+    width:198px;
+    height: 108px;
+}
+
+/* conteúdo principal */
+
+.primeira-secao {
+    background: linear-gradient(180deg, #070cff, #000269);
+    padding-bottom: 5em
+}
+
+.principal {
+    margin: 0 auto;
+    width: 940px;
+    display: flex;
+}
+
+.texto-marketing {
+    width: 20em;
+    margin: 0 auto;
+    padding: 1em;
+    color: var(--cor-texto);
+    font-size: 1.4em;
+}
+
+#texto-modificado {
+    background-color: darkslateblue;
+    color: var(--cor-texto);
+    font-style: italic;
+    font-size: 1.0875em;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.label-escrever {
+    margin: 0 0 5px 5px;
+    color: var(--cor-texto);
+}
+
+.input-escrever {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    box-shadow: 1em 1em #000269;
+    transition: 0.3s all ease;
+}
+
+.checkbox {
+    text-align: center;
+    margin: 1.5em 0 1em 0;
+}
+
+#marcar-label {
+    font-size: 11px;
+}
+
+.botao {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--cor-header);
+    color: var(--cor-texto);
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    font-family: "Poppins", Sans-serif;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.caixa-imagem-dispositivos {
+    display: flex;
+    align-items: center;
+}
+
+.imagem-dispositivos {
+    width: 600px;
+}
+
+.segunda-secao {
+    background: linear-gradient(180deg, #000269, #00012e);
+}
+
+.vantagens {
+    color: var(--cor-texto);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:0 auto;
+    width: 940px;
+    padding-bottom: 5em;
+}
+
+.vantagens > h1, .apresentacao > h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.vantagens > div {
+    display: flex;
+    margin: 1em;
+}
+
+.beneficios {
+    box-sizing: border-box;
+    width: 33%;
+    height: 18em;
+    margin: 0 1em;
+    padding: 1em;
+    border: 5px solid var(--azul);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5em;
+    box-shadow: 1em 1em #000269;
+    transition: 0.3s all ease;
+}
+
+.beneficios > div {
+    height: 175px;
+    display: flex;
+    align-items: center;
+}
+
+#texto-grande {
+    font-size: 0.725em;
+}
+
+.imagem-generica {
+    width: 8em;
+    height: 8em;
+}
+
+.terceira-secao {
+    background: linear-gradient(180deg, #00012e, #000000);
+    padding-bottom: 5em;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--cor-texto);
+    padding-bottom: 5em;
+}
+
+.conteudo-apresentacao {display: flex;
+    justify-content: center;
+}
+
+.texto-apresentacao {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.caixa-foto-douglas {
+    width: fit-content;
+    height: fit-content;
+}
+
+.foto-douglas {
+    width: 460px;
+    height: 460px;
+    margin: 0 2em 0 0;
+    border: 5px solid var(--azul);
+    border-radius: 2em;
+    box-shadow: 1em 1em #000269;
+    transition: 0.3s all ease;
+}
+
+
+footer {
+    position: sticky;
+    top: 100vh;
+    background-color: black;
+    color: white;
+    padding: 6em;
+    display: flex;
+    justify-content: center
+}
+
+footer > div {
+    width: 470px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links > a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s all ease;
+}
+
+/* animações */
+
+.input-escrever:hover {
+    box-shadow: 1.5em 1.5em #000269;
+}
+
+.input-escrever:focus {
+    outline: none;
+}
+
+.botao:hover {
+    background-color: #1b1fff;
+}
+
+.beneficios:hover {
+    box-shadow: 1.5em 1.5em #000269;
+    width: 35%;
+    height: 18.5em;
+}
+
+.foto-douglas:hover {
+    width: 480px;
+    height: 480px;
+    box-shadow: 1.5em 1.5em #000269;
+}
+
+.links > a:hover {
+    color: var(--azul);
+}
