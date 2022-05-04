@@ -21,6 +21,7 @@ body {
 }
 
 /* cabeçalho */
+
 header {
     background-color: var(--cor-header);
 }
@@ -32,8 +33,8 @@ header {
 }
 
 .logo {
-    width:198px;
-    height: 108px;
+    width: 316.8px;
+    height: 172px;
 }
 
 /* conteúdo principal */
@@ -58,7 +59,7 @@ header {
 }
 
 #texto-modificado {
-    background-color: darkslateblue;
+    text-decoration: underline #000269 5px;
     color: var(--cor-texto);
     font-style: italic;
     font-size: 1.0875em;
@@ -89,7 +90,7 @@ form {
 .input-escrever {
     border-radius: 20px;
     border: none;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     box-shadow: 1em 1em #000269;
     transition: 0.3s all ease;
 }
@@ -146,7 +147,7 @@ form {
     margin-bottom: 1em;
 }
 
-.vantagens > div {
+.caixa-beneficios {
     display: flex;
     margin: 1em;
 }
@@ -177,9 +178,10 @@ form {
     font-size: 0.725em;
 }
 
-.imagem-generica {
+.imagem-beneficios {
     width: 8em;
     height: 8em;
+    margin: 0 auto;
 }
 
 .terceira-secao {
@@ -252,12 +254,13 @@ footer > div {
 
 /* animações */
 
-.input-escrever:hover {
-    box-shadow: 1.5em 1.5em #000269;
+.input-escrever:hover, .input-escrever:focus {
+    box-shadow: 1.5em 1.5em  var(--azul);
 }
 
 .input-escrever:focus {
     outline: none;
+
 }
 
 .botao:hover {
@@ -265,7 +268,7 @@ footer > div {
 }
 
 .beneficios:hover {
-    box-shadow: 1.5em 1.5em #000269;
+    box-shadow: 1.5em 1.5em var(--azul);
     width: 35%;
     height: 18.5em;
 }
@@ -273,9 +276,169 @@ footer > div {
 .foto-douglas:hover {
     width: 480px;
     height: 480px;
-    box-shadow: 1.5em 1.5em #000269;
+    box-shadow: 1.5em 1.5em  var(--azul);
 }
 
 .links > a:hover {
     color: var(--azul);
+}
+
+@media screen and (max-width: 1300px){
+    .caixa-logo,
+    .principal,
+    .texto-marketing,
+    .caixa-imagem-dispositivos,
+    .vantagens,
+    .caixa-beneficios,
+    .conteudo-apresentacao,
+    .caixa-links
+    {
+        width: auto;
+    }
+
+    .caixa-logo {
+        text-align: center;
+    }
+
+    .logo {
+        width: 316.8px;
+        height: 172px;
+    }
+
+    .primeira-secao {
+        padding-top: 1em;
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+    }
+
+    .imagem-dispositivos,
+    .formulario
+    {
+        width: calc(100vw - 17%);
+        margin: 0 auto;
+    }
+
+    .segunda-secao {
+        padding-top: 1em;
+    }
+
+    .caixa-beneficios {
+        flex-direction: column
+    }
+
+    .beneficios {
+        width: calc(100vw - 20%);
+        margin: 0 auto 2em auto;
+        box-shadow: 0.5em 0.5em #000269;
+    }
+
+    .terceira-secao {
+        padding-top: 1em;
+        padding-bottom: 0;
+    }
+
+    .conteudo-apresentacao {
+        flex-direction: column;
+    }
+    
+    .foto-douglas {
+        width: calc(100vw - 25%);
+        height: calc(100vw - 25%);
+        margin: 0 auto;
+
+    }
+
+    .texto-apresentacao {
+        width: calc(100vw - 15%);
+        margin: 2em auto 0 auto;
+        
+    }
+
+    footer {
+        padding: 2em;
+    }
+    
+    .caixa-links {
+        flex-direction: column;
+    }
+    
+    .links {
+        padding: 0.5em;
+    }
+    
+    /* animações responsiva */
+
+    .beneficios:hover {
+        box-shadow: 0.8em 0.8em var(--azul);
+        width: calc(100vw - 20%);
+        height: 18.5em;
+    }
+
+    .foto-douglas:hover {
+        width: calc(100vw - 23%);
+        height: calc(100vw - 23%);
+        box-shadow: 1.2em 1.2em  var(--azul);
+    }
+}
+
+@media screen and (min-width:700px) and (max-width: 999px) {
+    
+    .caixa-beneficios {
+        flex-flow: row wrap;
+    }
+
+    .beneficios {
+        width: calc(100vw - 60%)
+    }
+
+    .beneficios:hover {
+        width: calc(100vw - 60%);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .caixa-beneficios {
+        flex-flow: row;
+    }
+
+    .beneficios {
+        width: calc(100vw - 75%);
+    }
+
+    /* animações */
+
+    .beneficios:hover {
+        width: calc(100vw - 75%);
+    }
+}
+
+@media screen and (max-width:317px) {
+    
+    .logo {
+        width: calc(100vw - 10%);
+        height: calc(100vw - 10%);
+    }
+    
+    .imagem-beneficios {
+        width: 7em;
+        height: 7em;
+    }
+
+    .vantagens > h1, .apresentacao > h1 {
+        font-size: 2em
+    }
+    /* animações */
+
+    .beneficios:hover {
+        box-shadow: 0.5em 0.5em var(--azul);
+        width: calc(100vw - 20%);
+        height: 18.5em;
+    }
+
+    .input-escrever:hover, .input-escrever:focus {
+        box-shadow: 1.2em 1.2em  var(--azul);
+    }
+    
 }
