@@ -1,29 +1,32 @@
-/* variáveis */
+/* Variáveis */
 :root {
-    --cor-header: #070cff;
-    --cor-de-fundo: #00012e;
-    --azul: #0006FF;
-    --cor-botao: #00FF23;
-    --cor-texto: white;
-    --primeiro-gradiente: #f2f3ff;
-    --segundo-gradiente: #000269;
-
+    --fonte: "Montserrat";
+    --azul-cabecalho: #070cff;
+    --azul-padrao: #0006FF;
+    --azul-escuro: #000269;
+    --branco-texto: white;
+    --preto-rodape: black;
+    --botao-hover: #1a1fff;
+    --gradiente-primeira-secao: linear-gradient(180deg, #070cff, #000269);
+    --gradiente-segunda-secao: linear-gradient(180deg, #000269, #00012e);
+    --gradiente-terceira-secao: linear-gradient(180deg, #00012e, #000000);
 }
 
-/* estilos gerais */
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Montserrat;
+    font-family: var(--fonte);
+    color: var(--branco-texto);
 }
 
-/* cabeçalho */
+/* Cabeçalho */
 
 header {
-    background-color: var(--cor-header);
+    background-color: var(--azul-cabecalho);
 }
 
 .caixa-logo {
@@ -37,10 +40,10 @@ header {
     height: 172px;
 }
 
-/* conteúdo principal */
+/* Primeira Seção */
 
 .primeira-secao {
-    background: linear-gradient(180deg, #070cff, #000269);
+    background: var(--gradiente-primeira-secao);
     padding-bottom: 5em
 }
 
@@ -54,13 +57,11 @@ header {
     width: 20em;
     margin: 0 auto;
     padding: 1em;
-    color: var(--cor-texto);
     font-size: 1.4em;
 }
 
 #texto-modificado {
-    text-decoration: underline #000269 5px;
-    color: var(--cor-texto);
+    text-decoration: underline var(--azul-escuro) 5px;
     font-style: italic;
     font-size: 1.0875em;
 }
@@ -84,14 +85,13 @@ form {
 
 .label-escrever {
     margin: 0 0 5px 5px;
-    color: var(--cor-texto);
 }
 
 .input-escrever {
     border-radius: 20px;
     border: none;
     padding: 10px 10px 10px 20px;
-    box-shadow: 1em 1em #000269;
+    box-shadow: 1em 1em var(--azul-escuro);
     transition: 0.3s all ease;
 }
 
@@ -107,13 +107,13 @@ form {
 .botao {
     width: 100%;
     margin: 0 auto;
-    background-color: var(--cor-header);
-    color: var(--cor-texto);
+    background-color: var(--azul-cabecalho);
+    color: var(--branco-texto);
     outline: none;
     border-radius: 20px;
     border: none;
     padding: 10px;
-    font-family: "Poppins", Sans-serif;
+    font-family: var(--fonte);
     font-size: 1.25em;
     cursor: pointer;
     transition: 0.3s all ease;
@@ -128,12 +128,13 @@ form {
     width: 600px;
 }
 
+/* Segunda Seção */
+
 .segunda-secao {
-    background: linear-gradient(180deg, #000269, #00012e);
+    background: var(--gradiente-segunda-secao);
 }
 
 .vantagens {
-    color: var(--cor-texto);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -158,13 +159,13 @@ form {
     height: 18em;
     margin: 0 1em;
     padding: 1em;
-    border: 5px solid var(--azul);
+    border: 5px solid var(--azul-padrao);
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: 1.5em;
-    box-shadow: 1em 1em #000269;
+    box-shadow: 1em 1em var(--azul-escuro);
     transition: 0.3s all ease;
 }
 
@@ -184,8 +185,10 @@ form {
     margin: 0 auto;
 }
 
+/* Terceira Seção */
+
 .terceira-secao {
-    background: linear-gradient(180deg, #00012e, #000000);
+    background: var(--gradiente-terceira-secao);
     padding-bottom: 5em;
 }
 
@@ -193,11 +196,11 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--cor-texto);
     padding-bottom: 5em;
 }
 
-.conteudo-apresentacao {display: flex;
+.conteudo-apresentacao {
+    display: flex;
     justify-content: center;
 }
 
@@ -217,24 +220,24 @@ form {
     width: 460px;
     height: 460px;
     margin: 0 2em 0 0;
-    border: 5px solid var(--azul);
+    border: 5px solid var(--azul-padrao);
     border-radius: 2em;
-    box-shadow: 1em 1em #000269;
+    box-shadow: 1em 1em var(--azul-escuro);
     transition: 0.3s all ease;
 }
 
+/* Rodapé */
 
 footer {
     position: sticky;
     top: 100vh;
-    background-color: black;
-    color: white;
+    background-color: var(--preto-rodape);
     padding: 6em;
     display: flex;
     justify-content: center
 }
 
-footer > div {
+.caixa-links {
     width: 470px;
     display: flex;
     justify-content: space-between;
@@ -248,14 +251,14 @@ footer > div {
 
 .links > a {
     text-decoration: none;
-    color: white;
+    color: var(--branco-texto);
     transition: 0.3s all ease;
 }
 
-/* animações */
+/* Animações */
 
 .input-escrever:hover, .input-escrever:focus {
-    box-shadow: 1.5em 1.5em  var(--azul);
+    box-shadow: 1.5em 1.5em  var(--azul-padrao);
 }
 
 .input-escrever:focus {
@@ -264,11 +267,11 @@ footer > div {
 }
 
 .botao:hover {
-    background-color: #1b1fff;
+    background-color: var(--botao-hover);
 }
 
 .beneficios:hover {
-    box-shadow: 1.5em 1.5em var(--azul);
+    box-shadow: 1.5em 1.5em var(--azul-padrao);
     width: 35%;
     height: 18.5em;
 }
@@ -276,14 +279,18 @@ footer > div {
 .foto-douglas:hover {
     width: 480px;
     height: 480px;
-    box-shadow: 1.5em 1.5em  var(--azul);
+    box-shadow: 1.2em 1.2em  var(--azul-padrao);
 }
 
 .links > a:hover {
-    color: var(--azul);
+    color: var(--azul-padrao);
 }
 
+/* Design Responsivo para telas até 1300px */
+
 @media screen and (max-width: 1300px){
+
+    /* Estilos gerais */
     .caixa-logo,
     .principal,
     .texto-marketing,
@@ -296,6 +303,8 @@ footer > div {
         width: auto;
     }
 
+    /* Cabeçalho */
+
     .caixa-logo {
         text-align: center;
     }
@@ -305,6 +314,8 @@ footer > div {
         height: 172px;
     }
 
+    /* Primeira Seção */
+
     .primeira-secao {
         padding-top: 1em;
     }
@@ -313,12 +324,14 @@ footer > div {
         flex-direction: column-reverse;
     }
 
-    .imagem-dispositivos,
-    .formulario
+    .formulario,
+    .imagem-dispositivos
     {
         width: calc(100vw - 17%);
         margin: 0 auto;
     }
+
+    /* Segunda Seção */
 
     .segunda-secao {
         padding-top: 1em;
@@ -331,8 +344,10 @@ footer > div {
     .beneficios {
         width: calc(100vw - 20%);
         margin: 0 auto 2em auto;
-        box-shadow: 0.5em 0.5em #000269;
+        box-shadow: 0.5em 0.5em var(--azul-escuro);
     }
+
+    /* Terceira Seção */
 
     .terceira-secao {
         padding-top: 1em;
@@ -356,6 +371,8 @@ footer > div {
         
     }
 
+    /* Rodapé */
+
     footer {
         padding: 2em;
     }
@@ -368,10 +385,10 @@ footer > div {
         padding: 0.5em;
     }
     
-    /* animações responsiva */
+    /* Animações */
 
     .beneficios:hover {
-        box-shadow: 0.8em 0.8em var(--azul);
+        box-shadow: 0.8em 0.8em var(--azul-padrao);
         width: calc(100vw - 20%);
         height: 18.5em;
     }
@@ -379,12 +396,52 @@ footer > div {
     .foto-douglas:hover {
         width: calc(100vw - 23%);
         height: calc(100vw - 23%);
-        box-shadow: 1.2em 1.2em  var(--azul);
+        box-shadow: 1.2em 1.2em  var(--azul-padrao);
     }
 }
 
+/* Ajustes para telas de, no máximo, 317px */
+
+@media screen and (max-width:317px) {
+    
+    /* Cabeçalho */
+    .logo {
+        width: calc(100vw - 10%);
+        height: calc(100vw - 10%);
+    }
+
+    /* Segunda Seção */
+    
+    .imagem-beneficios {
+        width: 7em;
+        height: 7em;
+    }
+
+    /* Todos os títulos da página */
+    .vantagens > h1,
+    .apresentacao > h1 {
+        font-size: 2em
+    }
+
+    /* Animações */
+
+    .beneficios:hover {
+        box-shadow: 0.5em 0.5em var(--azul-padrao);
+        width: calc(100vw - 20%);
+        height: 18.5em;
+    }
+
+    .input-escrever:hover, .input-escrever:focus {
+        box-shadow: 1.2em 1.2em  var(--azul-padrao);
+    }
+    
+}
+
+/* Ajustes para telas entre 700px e 999px */
+
 @media screen and (min-width:700px) and (max-width: 999px) {
     
+    /* Segunda Seção */
     .caixa-beneficios {
         flex-flow: row wrap;
     }
@@ -393,12 +450,17 @@ footer > div {
         width: calc(100vw - 60%)
     }
 
+    /* Animações */
     .beneficios:hover {
         width: calc(100vw - 60%);
     }
 }
 
+/* Ajustes para telas de, no mínimo, 1000px */
+
 @media screen and (min-width: 1000px) {
+    
+    /* Segunda Seção */
     .caixa-beneficios {
         flex-flow: row;
     }
@@ -407,38 +469,10 @@ footer > div {
         width: calc(100vw - 75%);
     }
 
-    /* animações */
+    /* Animações */
 
     .beneficios:hover {
         width: calc(100vw - 75%);
     }
 }
 
-@media screen and (max-width:317px) {
-    
-    .logo {
-        width: calc(100vw - 10%);
-        height: calc(100vw - 10%);
-    }
-    
-    .imagem-beneficios {
-        width: 7em;
-        height: 7em;
-    }
-
-    .vantagens > h1, .apresentacao > h1 {
-        font-size: 2em
-    }
-    /* animações */
-
-    .beneficios:hover {
-        box-shadow: 0.5em 0.5em var(--azul);
-        width: calc(100vw - 20%);
-        height: 18.5em;
-    }
-
-    .input-escrever:hover, .input-escrever:focus {
-        box-shadow: 1.2em 1.2em  var(--azul);
-    }
-    
-}
