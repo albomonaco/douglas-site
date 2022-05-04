@@ -1,6 +1,6 @@
 /* Variáveis */
 :root {
-    --fonte: "Montserrat";
+    --fonte: "Montserrat", sans-serif;
     --azul-cabecalho: #070cff;
     --azul-padrao: #0006FF;
     --azul-escuro: #000269;
